@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Form</title>
+	<style>
+		body {
+			background-color: black;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 75vh;
+		}
+
+		.container a{
+			width: 15%;
+			text-align: center;
+		}
+		
+		.title {
+			color: white;
+			font-size: 3rem;
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+		
+		.btn {
+			display: inline-block;
+			padding: 1rem 2rem;
+			border: 2px solid white;
+			border-radius: 50px;
+			color: white;
+			font-size: 1.2rem;
+			text-decoration: none;
+			margin: 1rem;
+			transition: all 0.3s ease;
+		}
+
+		.btn:hover {
+			background-color: white;
+			color: black;
+			padding: 1.2rem 2.2rem;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: rgb(149, 149, 149);
+			padding: 2rem;
+			border-radius: 1rem;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+			width: 60%;
+			margin: 0 auto;
+		}
+
+		input[type="text"], textarea {
+			padding: 1rem;
+			margin-bottom: 1rem;
+			width: 100%;
+			font-size: 1.2rem;
+			border-radius: 0.5rem;
+			border: none;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+			resize: none;
+			font-family: Arial, sans-serif;
+		}
+
+		input[type="submit"] {
+			padding: 1rem 2rem;
+			background-color: black;
+			color: white;
+			border: none;
+			border-radius: 0.5rem;
+			font-size: 1.2rem;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+
+		input[type="submit"]:hover {
+			background-color: white;
+			color: black;
+            border: black 20px;
+		}
+
+		label {
+			font-size: 1.2rem;
+			color: black;
+			margin-bottom: 0.5rem;
+		}
+	</style>
+</head>
+<body>
+	<a class="btn" href="/">Back to Home</a>
+	<div class="container">
+		<h1 class="title">Contact Form</h1>
+		<form>
+			<label for="firstName">First Name:</label>
+			<input type="text" id="firstName" name="firstName" required>
+
+			<label for="lastName">Last Name:</label>
+			<input type="text" id="lastName" name="lastName" required>
+
+			<label for="email">Email:</label>
+			<input type="text" id="email" name="email" required>
+
+			<label for="reason">Reason:</label>
+			<input type="text" id="reason" name="reason" required>
+
+			<label for="elaborate">Elaborate:</label>
+			<textarea id="elaborate"
+            name="elaborate" rows="5" required></textarea>
+
+            <input type="submit" value="Submit">
+            <!-- TODO -->
+            <!-- make it so that i recive an eamil with the subject being the reason and the body is the elaboration
+             -->
+        </form>
+    </div>
+</body>
+</html>    

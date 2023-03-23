@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kieran Bendell - Founder of VST</title>
+	<style type="text/css">
+
+        @font-face {
+			font-family: "Elnath";
+			src: url("./Assets/ELNATH.ttf");
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #000000;
+			color: #FFFFFF;
+		}
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			max-width: 100%;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		.about-me {
+			flex: 1 1 300px;
+			margin-right: 20px;
+			text-align: center;
+		}
+
+		.about-me img {
+			max-width: 20%;
+			border-radius: 50%;
+			margin-bottom: 20px;
+			margin-left: 20px;
+		}
+
+        .about-me h1{
+            font-family: "Elnath";
+        }
+
+        .about-me p{
+            font-size: larger;
+        }
+
+		.sidebar {
+			flex: 0 0 200px;
+			background-color: #282828;
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			border-radius: 1px;
+			height: 100%;
+			box-sizing: border-box;
+		}
+
+		.sidebar ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.sidebar li {
+			margin-bottom: 10px;
+		}
+
+		.sidebar a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 150px;
+			height: 100%;
+			text-align: center;
+			border: 2px solid #FFFFFF;
+			border-radius: 40px;
+			color: #FFFFFF;
+			text-decoration: none;
+			margin-bottom: 10px;
+			transition: all 0.3s ease;
+			box-sizing: border-box;
+			font-weight: bold;
+		}
+
+		.sidebar a:hover {
+			padding-top: 10%;
+			padding-bottom: 10%;
+			background-color: #FFFFFF;
+			color: #000000;
+			border: 2px solid #000000;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="sidebar">
+			<ul>
+				<li><a href="https://github.com/Archers007">Github Projects</a></li>
+				<li><a href="./Services.html">Services</a></li>
+				<li><a href="./Contact.html">Contact</a></li>
+				<li><a href="./Partner.html">Partner</a></li>
+                <li><a href="./Socials.html">Socials</a></li>
+			</ul>
+		</div>
+		<div class="about-me">
+			<h1>Kieran Bendell</h1>
+			<img src="./Assets/IMG_3187.png" alt="Kieran Bendell">
+			<p>Kieran Bendell is the founder of VST and a talented software engineer.</p>
+			<p>At just 16 years old, he has already made significant contributions to the </p>
+			<p>field and has ambitious plans for the future. Kieran is currently in high school </p>
+			<p>and is set to graduate in 2024.</p>
+		</div>
+	</div>
+</body>

@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<title >Click Memberships</title>
+		<link rel="icon" sizes="192x192" href="https://static.wixstatic.com/media/5ac6c4_c35df5d2b3e14d03a1d7dd4eae9f3006%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/5ac6c4_c35df5d2b3e14d03a1d7dd4eae9f3006%7Emv2.png">
+		<script src="script.js"></script>
+		<style>
+			input[type=text] {
+				padding: 5px;
+ 				border: 2px rgb(222, 255, 251);
+  				border-radius: 10px;
+				color: rgb(32, 44, 60);
+				background: white;
+			}
+			input[type=text]:focus{
+				background-color: rgb(222, 255, 251);
+  				border: 3px solid #000000;
+			}
+			body{
+				background: rgb(32, 44, 60);
+			}
+			.select{
+				padding: 5px;
+ 				border: 2px rgb(222, 255, 251);
+  				border-radius: 10px;
+				color: rgb(32, 44, 60);
+				background: white;
+			}
+			#UserInfo{
+				width:200px;
+  				padding:20px;
+				top: 50px;
+				align-content: center;
+				font-family:pacifica-w00-condensed;
+				color: rgb(240, 252, 251);
+				
+			}
+			.center{
+				position: center;
+				text-align: center;
+				margin-left: auto;
+ 				margin-right: auto;
+			}
+			.inp{
+				padding-top: 5px;
+				width: 100%
+			}
+		</style>
+		
+		
+  	<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+		<script>
+		</script>
+		  
+	</head>
+	<body>
+		<h1 class="center" style="color: rgb(222, 255, 251);padding-top: 300;">Membership Card</h1>
+		<div id="UserInfo" class="center">
+			<form class="center" action ="/sign" method="POST">
+			  	<label for="username">Username:</label><br>
+			  	<input class="inp" type="text" id="username" name="username" placeholder="Enter Username:"><br>
+		  	  	<label for="memberlvl">Membership Level</label><br>
+		  		<select name="memberlvl" id="memberlvl" class="select inp">
+					<option value="Basic Member">Basic Member</option>
+					<option value="VIP Member">VIP Member</option>
+					<option value="Admin Pass">ADMIN</option>
+				</select><br>
+				<label for="Email">Email:</label>
+				<br>
+				<input class="inp" type="text" id="Email" name="email" placeholder="Your@email.here">
+				<br>
+				<label for="Barcode">Barcode String:</label>
+				<br>
+				<input class="inp" type="text" id="Barcode" name="barcode" placeholder="bm3483883">
+				<br>
+				<label for="SerialNum" style="display:none;">Serial Number</label>
+				<br>
+				<input class="inp" type="text" id="SerialNum" name="serialNum" placeholder="123abc" style="display:none;">
+				<!-- <br>
+				<label for="strip">Select Strip Image:</label>
+				<br>
+  				<input type="file" id="strip" name="strip" accept="image/*" onchange="loadFile(event, this.id)">
+				<br>
+				<label for="icon">Select Icon Image:</label>
+				<br>
+				<input type="file" id="icon" name="icon" accept="image/*" onchange="loadFile(event, this.id)">
+				<br>
+				<label for="logo">Select Logo Image:</label>
+				<br>
+				<input type="file" id="logo" name="logo" accept="image/*" onchange="loadFile(event, this.id)"> -->
+				<input type="submit" value = "Submit" style="height:3%; width:75%; color: rgb(32, 44, 60);background: white; 
+				border: 2px rgb(222, 255, 251);border-radius: 10px;">
+			</form>
+			<!-- <img id="stripImage" width="200" style="float:left;">
+			<img id="iconImage" width="200" style="float:left;">
+			<img id="logoImage" width="200" style="float:left;">
+			<div id="Test">
+				<form action ="/upload" method="POST">
+					<input type="file" id="file" name="file">
+					<input type="submit" value="submit">
+				</form>				  
+			</div> -->
+		</div>		
+	</body>
+</html>

@@ -56,15 +56,16 @@
 			background-color: rgb(149, 149, 149);
 			padding: 2rem;
 			border-radius: 1rem;
-			box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 			width: 45%;
 			margin: 0 auto;
 		}
 
 		input[type="text"], textarea {
+            text-align: center;
 			padding: 1rem;
 			margin-bottom: 1rem;
-			width: 100%;
+			width: 75%;
 			font-size: 1.2rem;
 			border-radius: 0.5rem;
 			border: none;
@@ -72,6 +73,33 @@
 			resize: none;
 			font-family: Arial, sans-serif;
 		}
+
+        select{
+            text-align: center;
+			padding: 1rem;
+			margin-bottom: 1rem;
+			width: 81%;
+			font-size: 1.2rem;
+			border-radius: 0.5rem;
+			border: none;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+			resize: none;
+			font-family: Arial, sans-serif;
+		}
+
+        input[type="password"], textarea {
+            text-align: center;
+			padding: 1rem;
+			margin-bottom: 1rem;
+			width: 75%;
+			font-size: 1.2rem;
+			border-radius: 0.5rem;
+			border: none;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+			resize: none;
+			font-family: Arial, sans-serif;
+		}
+
 
 		input[type="submit"] {
 			padding: 1rem 2rem;
@@ -100,28 +128,25 @@
 <body>
 	<a class="btn" href="/">Back to Home</a>
 	<div class="container">
-		<h1 class="title">Contact Form</h1>
-		<form>
-			<label for="firstName">First Name:</label>
-			<input type="text" id="firstName" name="firstName" required>
+		<h1 class="title">Verification</h1>
+		<form action ="/check" method="POST">
+			<label for="CientID">Client ID:</label>
+			<input type="text" id="CientID" name="ClientID" placeholder="B2790" required>
 
-			<label for="lastName">Last Name:</label>
-			<input type="text" id="lastName" name="lastName" required>
+			<label for="Service">Service</label>
+            <select name="Services" id="Service" class="same">
+                <option value="VST">Virtual SignPass Tool</option>
+                <option value="WBR">Website Build Request</option>
+            </select>
 
 			<label for="email">Email:</label>
-			<input type="text" id="email" name="email" required>
+			<input type="text" id="Email" name="email" required>
 
-			<label for="reason">Reason:</label>
-			<input type="text" id="reason" name="reason" required>
-
-			<label for="elaborate">Elaborate:</label>
-			<textarea id="elaborate"
-            name="elaborate" rows="5" required></textarea>
+            <label for="Pass">Password</label>
+            <input type="password" id="Pass" name="pass" class="same" required>
+            <br>
 
             <input type="submit" value="Submit">
-            <!-- TODO -->
-            <!-- make it so that i recive an eamil with the subject being the reason and the body is the elaboration
-             -->
         </form>
     </div>
 </body>

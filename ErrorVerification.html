@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="./Assets/Bendell.png">
+	<title>Error Page</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #000000;
+			color: #FFFFFF;
+		}
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			max-width: 100%;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		.error-message {
+			flex: 1 1 auto;
+			text-align: center;
+		}
+
+		.error-message h1 {
+			font-size: 3rem;
+			margin-bottom: 20px;
+		}
+
+        .btn {
+			display: inline-block;
+			padding: 1rem 2rem;
+			border: 2px solid white;
+			border-radius: 50px;
+			color: white;
+			font-size: 1.2rem;
+			text-decoration: none;
+			margin: 1rem;
+			transition: all 0.3s ease;
+		}
+
+		.btn:hover {
+			background-color: white;
+			color: black;
+			padding: 1.2rem 2.2rem;
+		}
+	</style>
+    <script>
+		function REDturn(){
+			setTimeout(() => {
+				console.log(3);
+			}, 1000);
+			document.getElementById("red").textContent = "Redirecting you in 2...";
+			setTimeout(() => {
+				console.log(2);
+			}, 2000);
+			document.getElementById("red").textContent = "Redirecting you in 1...";
+			setTimeout(() => {
+				console.log(1);
+			}, 3000);
+			document.getElementById("red").textContent = "Redirecting you now...";
+			setTimeout(() => {
+				window.location.href = 'http://localhost:8000/Services/Verification.html';
+			}, 4000);
+		}
+	</script>
+</head>
+<body onload="REDturn()">
+	<div class="container">
+		<div class="error-message">
+			<h1>Some Of The Info Was Incorrect</h1>
+            <a id="red">Redirecting you in 3...</a>
+            <a class="btn" href="/Services/Verification.html">Back to Verification</a>
+		</div>
+	</div>
+</body>
+</html>
